@@ -6,8 +6,11 @@
 <h>Please leave your message below:</h>
 <br>
 
+
 <form action="#" method='post'>{% csrf_token %}
-    {{ form }}
+    <table>
+    {{ form.as_table }}
+    </table>
     <br>
     <input type="submit" value="submit">
 

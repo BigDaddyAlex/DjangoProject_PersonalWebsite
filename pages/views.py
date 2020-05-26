@@ -15,6 +15,9 @@ class aboutPageView(TemplateView):
 
 class thanksPageView(TemplateView):
     template_name = 'thanks.html'
+
+class projectsPageView(TemplateView):
+    template_name = 'projects.html'
  
 def get_msg(request):
     if request.method=='POST':
@@ -22,12 +25,11 @@ def get_msg(request):
         if form.is_valid():
             fname=form.cleaned_data['fname']
             femail=form.cleaned_data['femail']
-            fmessage=form.cleaned_data['fmessage']
+            fmessage='From: '+fname+'\n'+'Email: '+femail+'\n'+form.cleaned_data['fmessage']
             recipients=['sqcalexander@gmail.com']
-            subject='New Msg'
+            subject='New Msg from Django App'
             send_mail(subject,fmessage,femail,recipients)
-            
-            
+        return redirect('/contact/thanks/')
     else:
         form=Contactform()
     return render(request,'contact.html',{'form':form})
