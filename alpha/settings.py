@@ -35,6 +35,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'pd$=tm3(n!$017yfd)*r)2ckqj%!c9*)1z$f%h9m!!3_e73@@$'
 
@@ -57,6 +59,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
