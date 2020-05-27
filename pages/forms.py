@@ -1,6 +1,6 @@
 from django import forms
 
 class Contactform(forms.Form):
-    fname=forms.CharField(label='name')
-    femail=forms.EmailField(label='email')
-    fmessage=forms.CharField(label='message',widget=forms.Textarea)
+    fname=forms.CharField(label='Name')
+    femail=forms.EmailField(label='Email')
+    fmessage=forms.CharField(label='Message',widget=forms.Textarea)
