@@ -1,14 +1,14 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'pages/base.css' %}" type="text/css" />
 
-<table>
-    <tr>
-        <th class="th1"><a href="{% url 'home' %}">Home</a></th>
-        <th class="th1"><a href="{% url 'about' %}">About</a></th>
-        <th class="th1"><a href="{% url 'contact' %}">Contact</a></th>
-        <th class="th1"><a href="{% url 'projects' %}">Projects</a></th>
-    </tr>
-</table>
+
+ 
+<a href="{% url 'home' %}" class='button'>Home</a>
+<a href="{% url 'about' %}" class='button'>About</a>
+<a href="{% url 'contact' %}" class='button'>Contact</a>
+<a href="{% url 'projects' %}" class='button'>Projects</a></th>
+    
+<br>
 {% block content %}
 
 {% endblock %}

@@ -1,16 +1,27 @@
 
 th.th1 {
-border: 1px solid #C8C8C8;
-background-color: #C8C8C8	;
-color: black
-font-size: 100%;
-width: 150px;
+  border: 1px solid #C8C8C8;
+  background-color: #C8C8C8	;
+  color: black
+  font-size: 100%;
+  width: 150px;
 }
 
 
 td.alignmiddle {
   text-align: center;
   width: 300px;
-
 }
 
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a.button {
+  -webkit-appearance: button;
+  text-decoration: none;
+  background-color: #C8C8C8;
+  padding: 1px 60px;
+  color: black
+}
