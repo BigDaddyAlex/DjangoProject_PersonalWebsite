@@ -1,6 +1,8 @@
 
 th.th1 {
-border: 1px solid black;
+border: 1px solid #C8C8C8;
+background-color: #C8C8C8	;
+color: black
 font-size: 100%;
 width: 150px;
 }
