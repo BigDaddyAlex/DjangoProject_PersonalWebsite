@@ -26,7 +26,6 @@ def get_msg(request):
             fname=form.cleaned_data['fname']
             femail=form.cleaned_data['femail']
             fmsg=form.cleaned_data['fmessage']
-            
             s= ContactMsg(contact_name=fname,contact_email=femail,contact_msg=fmsg)
             s.save()
 

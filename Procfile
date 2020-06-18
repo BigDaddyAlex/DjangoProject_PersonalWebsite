@@ -1,1 +1,1 @@
-waitress-serve --listen=*:8000 pages_project.wsgi:application
+web: waitress-serve --port=8080 alpha.wsgi:application
