@@ -1,1 +1,1 @@
-web: waitress-serve --port=8080 alpha.wsgi:application
+web: waitress-serve alpha.wsgi:application
