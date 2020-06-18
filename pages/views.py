@@ -25,10 +25,16 @@ def get_msg(request):
         if form.is_valid():
             fname=form.cleaned_data['fname']
             femail=form.cleaned_data['femail']
-            fmessage='From: '+fname+'\n'+'Email: '+femail+'\n'+form.cleaned_data['fmessage']
-            recipients=['sqcalexander@gmail.com']
-            subject='New Msg from Django App'
-            send_mail(subject,fmessage,femail,recipients)
+            fmsg=form.cleaned_data['fmessage']
+            
+            s= ContactMsg(contact_name=fname,contact_email=femail,contact_msg=fmsg)
+            s.save()
+
+            
+            # fmessage='From: '+fname+'\n'+'Email: '+femail+'\n'+form.cleaned_data['fmessage']
+            # recipients=['sqcalexander@gmail.com']
+            # subject='New Msg from Django App'
+            # send_mail(subject,fmessage,femail,recipients)
         return redirect('/contact/thanks/')
     else:
         form=Contactform()
