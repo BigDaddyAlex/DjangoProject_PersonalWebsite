@@ -2,10 +2,11 @@ from django.views.generic import TemplateView
 from django.views.generic.edit import FormView
 from django.shortcuts import render,redirect
 from django.contrib import messages
-from .forms import Contactform
-from .models import ContactMsg
+from .forms import Contactform, Topicform
+from .models import ContactMsg, Topic
 import inspect
 from django.core.mail import send_mail
+from django.utils.timezone import datetime
 
 class homePageView(TemplateView):
     template_name = 'home.html'
@@ -28,14 +29,22 @@ def get_msg(request):
             fmsg=form.cleaned_data['fmessage']
             s= ContactMsg(contact_name=fname,contact_email=femail,contact_msg=fmsg)
             s.save()
-
-            
-            # fmessage='From: '+fname+'\n'+'Email: '+femail+'\n'+form.cleaned_data['fmessage']
-            # recipients=['sqcalexander@gmail.com']
-            # subject='New Msg from Django App'
-            # send_mail(subject,fmessage,femail,recipients)
         return redirect('/contact/thanks/')
     else:
         form=Contactform()
     return render(request,'contact.html',{'form':form})
 
+def get_topic(request):
+    if request.method=='POST':
+        form=Topicform(request.POST)
+        if form.is_valid():
+            topic_name=form.cleaned_data['topic_name']
+            topic_TLDR=form.cleaned_data['topic_TLDR']
+            topic_body=form.cleaned_data['topic_body']
+            topic_last_modified = datetime.now()
+            s=Topic(topic_name=topic_name,topic_TLDR=topic_TLDR,topic_body=topic_body,topic_last_modified=topic_last_modified)
+            s.save()
+        return redirect('/addtopic')
+    else:
+        form=Topicform()
+    return render(request,'addtopic.html',{'form':form})
