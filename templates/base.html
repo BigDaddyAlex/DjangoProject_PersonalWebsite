@@ -8,13 +8,16 @@
     <title>ASBlog</title>
     </head>
 <body>
-    <div class='tctv71'>  
+    <div class='tctv1'>  
         <a href="{% url 'home' %}"  class='hobwqm'>Home</a>
         <a href="{% url 'about' %}" class='hobwqm'>About</a>
         <a href="{% url 'contact' %}" class='hobwqm'>Contact</a>
         <a href="{% url 'projects' %}" class='hobwqm'>Projects</a></th>
     </div>
     <br>
-    {% block content %}{% endblock %}
+    <div class='tctv2'>
+        {% block content %}{% endblock %}
+    </div>
+    
 </body>
 </html>

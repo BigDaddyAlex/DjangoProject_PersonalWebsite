@@ -1,4 +1,8 @@
-div.tctv71 {
+* {
+  margin:0;
+}
+
+div.tctv1 {
   background-color: #20232a;
   height: 35px;
   margin-left: 0;
@@ -25,3 +29,7 @@ td.alignmiddle {
   width: 300px;
 }
 
+div.tctv2 {
+  margin-left: 50px;
+  margin-right: 50px;
+}
