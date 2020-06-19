@@ -5,3 +5,4 @@ class ContactMsg(models.Model):
     contact_email=models.CharField(max_length=30)
     contact_msg=models.CharField(max_length=300)
 
+
