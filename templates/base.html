@@ -1,14 +1,20 @@
-{% load static %}
-<link rel="stylesheet" href="{% static 'pages/base.css' %}" type="text/css" />
-
-
- 
-<a href="{% url 'home' %}" class='button'>Home</a>
-<a href="{% url 'about' %}" class='button'>About</a>
-<a href="{% url 'contact' %}" class='button'>Contact</a>
-<a href="{% url 'projects' %}" class='button'>Projects</a></th>
-    
-<br>
-{% block content %}
-
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'pages/base.css' %}" type="text/css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASBlog</title>
+    </head>
+<body>
+    <div class='tctv71'>  
+        <a href="{% url 'home' %}"  class='hobwqm'>Home</a>
+        <a href="{% url 'about' %}" class='hobwqm'>About</a>
+        <a href="{% url 'contact' %}" class='hobwqm'>Contact</a>
+        <a href="{% url 'projects' %}" class='hobwqm'>Projects</a></th>
+    </div>
+    <br>
+    {% block content %}{% endblock %}
+</body>
+</html>

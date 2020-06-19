@@ -1,0 +1,27 @@
+div.tctv71 {
+  background-color: #20232a;
+}
+
+
+a.hobwqm {
+  background-color: #20232a;
+  width: 300px;
+}
+
+td.alignmiddle {
+  text-align: center;
+  width: 300px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a.button {
+  -webkit-appearance: button;
+  text-decoration: none;
+  background-color: #C8C8C8;
+  padding: 1px 60px;
+  color: black
+}
