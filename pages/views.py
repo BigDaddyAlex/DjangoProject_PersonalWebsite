@@ -12,7 +12,6 @@ def homeView(request):
     alltopics=Topic.objects.all()
     topics=alltopics.values()
     topic=topics
-    print(topics)
     return render(request, "home.html",{'topics':topics})
 
 class aboutPageView(TemplateView):
