@@ -18,12 +18,35 @@ a.hobwqm {
   text-decoration: none;
   font-size: 25px;
   overflow:hidden;
-  
 }
 
 a.hobwqm:hover {
   background-color: #ddd;
   color: black;
+}
+
+a.mhl1 {
+  background-color: #efefef; 
+  border: 1px solid black; 
+  color: black; 
+  padding: 5px 10px; 
+  text-align: center; 
+  display: inline-block; 
+  font-size: 20px; 
+  margin: 0 0; 
+  cursor: pointer; 
+  text-decoration:none; 
+}
+
+button.mbt1 {
+  background-color: #61daf8; /* Green */
+  border: none;
+  color: white;
+  padding: 6px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
 
 td.alignmiddle {
@@ -32,6 +55,24 @@ td.alignmiddle {
 }
 
 div.tctv2 {
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: 10%;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 25% 25% 25%;
+  grid-gap: 50px;
+}
+
+.wrapper >div{
+  background:#eee;
+  padding:2em;
+}
+
+.wrapper >div:nth-child(odd){
+  background:#ddd;
+}
+
+div.cdh1 {
+  
 }
