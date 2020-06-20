@@ -3,5 +3,18 @@
 {% block content %}
 <br>
 <div>Welcom to my space! This website is written with Django. Check out some interesting topics here.</div>
-
+<br>
+<a href="/addtopic">Add topics</a>
+{% for topic in topics %}
+<table class="table2">    
+    <tr>
+        <td>{{topic.topic_name}}</td>
+        <td>{{topic.topic_TLDR}}</td>
+        <td>{{topic.topic_body}}</td>
+        <td>{{topic.topic_last_modified}}</td>
+    </tr> 
+</table>
+{% endfor %}  
+    
 {% endblock %}
+

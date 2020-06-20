@@ -7,6 +7,6 @@ class ContactMsg(models.Model):
 
 class Topic(models.Model):
     topic_name=models.CharField(max_length=30)
-    topic_TLDR=models.CharField(max_length=30)
-    topic_body=models.CharField(max_length=1000)
+    topic_TLDR=models.CharField(max_length=300)
+    topic_body=models.CharField(max_length=3000)
     topic_last_modified=models.DateTimeField()

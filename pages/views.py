@@ -8,8 +8,12 @@ import inspect
 from django.core.mail import send_mail
 from django.utils.timezone import datetime
 
-class homePageView(TemplateView):
-    template_name = 'home.html'
+def homeView(request): 
+    alltopics=Topic.objects.all()
+    topics=alltopics.values()
+    topic=topics
+    print(topics)
+    return render(request, "home.html",{'topics':topics})
 
 class aboutPageView(TemplateView):
     template_name = 'about.html'
