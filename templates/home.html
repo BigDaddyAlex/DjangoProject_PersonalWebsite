@@ -10,20 +10,24 @@
     <div class="cdh1">Welcom to my space! This website is written with Django. Check out some interesting topics here.</div>
     <div class="cdh1">ELLISON: I quoted Genghis Khan, but let me tell you the whole story. I hesitate to say this because you might do the same thing The New York Times did. I was talking to a reporter about how I've worked a lot in Japan, and we were talking about competition. I recalled a conversation I had had with a Fujitsu executive who said to me, 'You Americans have no stomach for competition.' I said, 'Wait a minute. America knows capitalism.' He said, 'Don't tell me about railroads, don't tell me about the late 19th century. You Americans think there is room for everybody in the market. </div>
     <div class="cdh1">We in Japan think that our competitors are taking rice out of our children's mouths. We think that anything less than 100-percent market share is not enough. We believe in Genghis Khan's dictum: not sufficient to succeed--everyone else must fail. So The New York Times runs a picture of Larry EllisonLarryEllison saying, Not sufficient that I succeed, all others must fail. You know, I got hate mail from that.</div>
+{% for topic in topics %}
+    <div class="cdh1">
+        <h1>{{topic.topic_name}}</h1>
+        <br>
+        <h2>TLDR: </h2>
+        {{topic.topic_TLDR}}
+        <br>
+        <br>
+        {{topic.topic_body}}
+        <br>
+        <br>
+        Last update: {{topic.topic_last_modified}}
+    </div> 
+{% endfor %}  
 </div>
 <br>
-{% for topic in topics %}
-<table class="table2">    
-    <tr>
-        <td>{{topic.topic_name}}</td>
-        <td>{{topic.topic_TLDR}}</td>
-        <td>{{topic.topic_body}}</td>
-        <td>{{topic.topic_last_modified}}</td>
-    </tr> 
-</table>
+<br>
+<br>
 
-
-{% endfor %}  
-    
 {% endblock %}
 
