@@ -68,6 +68,8 @@ div.tctv2 {
 .wrapper >div{
   background:#eee;
   padding:2em;
+  overflow: auto;
+  word-wrap: break-word;
 }
 
 .wrapper >div:nth-child(odd){
