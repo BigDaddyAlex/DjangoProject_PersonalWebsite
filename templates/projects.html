@@ -1,22 +1,25 @@
-{% extends 'base.html' %}
-
-
-{% block content %}
+{% extends 'base.html' %}{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'pages/base.css' %}" type="text/css" />
 <br>
 <h>Please check out some of the projects I did in the past:</h>
 <br>
 <br>
-<table class="table1">
-    <tr>
-        <th class="alignmiddle">Links</th>
-        <th class="alignmiddle">Project List</th>
-    </tr>
-    <tr>
-        <td class="alignmiddle"><a href='https://todoappsqc.herokuapp.com/'>Click</a></td>
-        <td class="alignmiddle">A to-do list writen with Flask</td>
-    </tr>
+<h1>To-do list</h1>
+A project based on Flask which allows you to add, update and delete to-do items and keeps track of the time stamp. It follows the simple M-V-C pattern and uses a SQLite database that comes with Flask.
+Check our the project here: 
+<br>
+<a href='https://todoappsqc.herokuapp.com/' class='mhl1'>Link</a>
+<br>
+<br>
+<hr>
 
-</table>
+
+
+
+
+
+
 
 <br>
 {% endblock %}
